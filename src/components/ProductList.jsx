@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import ProductTile from "./ProductTile";
 import AddProductModal from "./AddProductModal";
-
 import "react-dropdown/style.css";
 
 const ProductList = () => {
@@ -12,8 +11,13 @@ const ProductList = () => {
   const [sortType, setSortType] = useState("price");
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResultsVisible, setSearchResultsVisible] = useState(false);
-  
+  const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    if (products) {
+      setProductList(products);
+    }
+  }, [products]);
 
   const handleSortTypeChange = (event) => {
     setSortType(event.target.value);
@@ -25,12 +29,17 @@ const ProductList = () => {
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    setSearchResultsVisible(true);
+  };
+
+  const handleRemoveProduct = (productId) => {
+    setProductList((prevProducts) =>
+      prevProducts.filter((product) => product.id !== productId)
+    );
   };
 
   const getSortedProducts = () => {
-    if (!products) return [];
-    return [...products].sort((a, b) => {
+    if (!productList) return [];
+    return [...productList].sort((a, b) => {
       if (sortType === "price") {
         if (sortOrder === "asc") {
           return a.selling_price - b.selling_price;
@@ -49,9 +58,9 @@ const ProductList = () => {
   };
 
   const getFilteredProducts = () => {
-    if (!products) return [];
+    if (!productList) return [];
     const lowercasedQuery = searchQuery.toLowerCase();
-    return products.filter(
+    return productList.filter(
       (product) =>
         product.name.toLowerCase().includes(lowercasedQuery) ||
         product.description.toLowerCase().includes(lowercasedQuery)
@@ -93,20 +102,28 @@ const ProductList = () => {
 
   return (
     <div className="w-[100%] h-[145%] bg-gray-200">
-      
-
       <div className="container mx-auto w-full mt-5">
-      <div className="flex flex-col md:flex-row sm:items-center py-5 justify-evenly">
-          <h1 className="text-3xl font-medium font-poppins mb-4 md:mb-0 border-b-2 border-gray-500 product-title">Products</h1>
-          <div className='flex flex-col md:flex-row items-center font-poppins'>
-            <h1 className="mr-2 mb-2 md:mb-0">Sort by</h1>
-            <div className='flex mb-2 md:mb-0 md:mr-10'>
-              <select className='border px-2 py-1 w-[100px] md:mr-2 cursor-pointer' value={sortType} onChange={handleSortTypeChange}>
+        <div className="flex flex-col md:flex-row sm:items-center py-5 justify-evenly">
+          <h1 className="text-3xl font-medium font-poppins mb-4 md:mb-0 border-b-2 border-gray-500 product-title">
+            Products
+          </h1>
+          <div className="flex flex-col md:flex-row items-center font-poppins">
+            <h1 className="mr-2 mb-2 md:mb-1">Sort by</h1>
+            <div className="flex mb-2 md:mb-0 md:mr-10">
+              <select
+                className="border px-2 py-1 w-[100px] md:mr-2 cursor-pointer"
+                value={sortType}
+                onChange={handleSortTypeChange}
+              >
                 <option value="price">Price</option>
                 <option value="name">Name</option>
               </select>
-              <select className='border px-2 py-1 w-[185px] cursor-pointer' value={sortOrder} onChange={handleSortOrderChange}>
-                {sortType === 'price' ? (
+              <select
+                className="border px-2 py-1 w-[185px] cursor-pointer"
+                value={sortOrder}
+                onChange={handleSortOrderChange}
+              >
+                {sortType === "price" ? (
                   <>
                     <option value="asc">Ascending</option>
                     <option value="desc">Descending</option>
@@ -128,8 +145,8 @@ const ProductList = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 pl-10">
-          {sortedProducts.map((product) => (
-            <ProductTile key={product.id} product={product} />
+          {filteredProducts.map((product) => (
+            <ProductTile key={product.id} product={product} onRemove={handleRemoveProduct} />
           ))}
         </div>
         {showModal && <AddProductModal onClose={() => setShowModal(false)} />}
