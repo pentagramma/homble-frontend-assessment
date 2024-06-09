@@ -22,7 +22,7 @@ const ProductTile = ({ product }) => {
         >
             <div className="flex-col flex object-contain cursor-pointer justify-center items-center">
                 <div className="flex justify-center items-center object-contain flex-col">
-                    <h2 className="font-poppins">{product.name}</h2>
+                    <h2 className="font-poppins border-b-2 border-black mb-1">{product.name}</h2>
                     <img src={product.productImage} alt="" className="rounded-md " />
                 </div>
                 <div className="flex items-center justify-center text-[11px] italic py-1 font-medium">
