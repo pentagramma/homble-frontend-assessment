@@ -4,6 +4,9 @@ import useFetch from '../hooks/useFetch';
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import LoadingSpinner from '../Loading/loading2.gif';
+import { FaPlus } from "react-icons/fa6";
+import { instance } from "../axios";
+
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -22,6 +25,20 @@ const ProductDetails = () => {
     if (!product) {
         return <div>No product found</div>;
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          await instance.post("/products", {
+            name: product.name,
+            description: product.description,
+            allergens: product.allergen_info,
+          });
+          
+        } catch (error) {
+          console.error("Something went wrong!", error);
+        }
+      };
 
     const details = [
         {
@@ -61,10 +78,23 @@ const ProductDetails = () => {
                     
                     <img src={product.productImage} alt={product.name} className='rounded-md  w-full max-w-xs md:max-w-sm lg:max-w-md'/>
                 </div>
-                <div className='rounded-md flex-col flex justify-start items-start font-abel text-xl md:text-2xl w-full'>
+             
+
+                <div className='rounded-md flex-row flex justify-between items-center font-abel text-xl md:text-2xl w-full mt-2'>
+                <div>
                 <h1 className='font-poppins text-2xl md:text-3xl border-b-2'>{product.name}</h1>
-                    <h1 className='font-bold text-gray-500'>Rs {product.selling_price}.00</h1>
+                <h1 className='font-bold text-gray-500'>Rs {product.selling_price}.00</h1>
                 </div>
+                <div className='tooltip-container'>
+                <button className='add-btn cursor-pointer hover:scale-105 duration-300 border-none' onClick={handleSubmit}>
+                <FaPlus className='bg-blue-400 text-white rounded-full size-[50px] hover:shadow-md relative mr-2 '/>
+                </button>
+                <span className="tooltip-text">Add Product</span>
+                </div>
+                </div>
+               
+                
+                
             </div>
             <div className='flex flex-col justify-center items-start mt-10 w-full max-w-2xl'>
                 {details.map((detail, index) => (

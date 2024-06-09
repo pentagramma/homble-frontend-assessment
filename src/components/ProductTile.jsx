@@ -21,15 +21,22 @@ const ProductTile = ({ product }) => {
                 onClick={handleRedirect}
             >
                 <div className="flex-col flex object-contain cursor-pointer justify-start items-start w-full">
+                   
+                    
+                    
                     <div className="flex justify-center items-center object-contain flex-col w-full">
                         <h2 className="italic text-[12px] pb-1">"{product.description}"</h2>
                         <img src={product.productImage} alt="" className="rounded-md" />
                     </div>
+                    
                     <div className="flex items-start justify-start text-[15px] font-poppins py-1 font-medium w-[95%] mx-2">
                         <h1>{product.name}</h1>
                     </div>
+                  
                     <div className="price-container flex items-start justify-start flex-col mx-2 text-[14px] rounded-md w-[95%] font-abel font-bold text-gray-500">
                         <p>Rs {product.selling_price}.00</p>
+                    
+                    
                     </div>
                 </div>
             </div>
