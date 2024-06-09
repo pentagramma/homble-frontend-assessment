@@ -10,3 +10,25 @@ body,
 .App {
   height: 100%;
 }
+
+.product-tile:hover .price-container,
+.product-tile:hover .price-container p {
+    color: white;
+}
+
+@media (max-width: 640px) {
+  .product-tile {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.product-title {
+  text-align: center; 
+}
+@media (max-width: 640px) {
+  .product-title {
+    margin-bottom: 10px; 
+  }
+}
+

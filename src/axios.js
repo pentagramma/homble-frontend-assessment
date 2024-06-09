@@ -7,7 +7,7 @@ import axios from "axios";
 
 const envBaseUrl = "https://frontend-assessment-server.onrender.com/api";
 
-const instance = axios.create({
+export const instance = axios.create({
   baseURL: envBaseUrl,
 });
 
