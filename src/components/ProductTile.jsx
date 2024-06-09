@@ -21,7 +21,7 @@ const ProductTile = ({ product }) => {
                 onClick={handleRedirect}
             >
                 <div className="flex-col flex object-contain cursor-pointer justify-start items-start w-full">
-                    <div className="flex justify-start items-start object-contain flex-col w-full">
+                    <div className="flex justify-center items-center object-contain flex-col w-full">
                         <h2 className="italic text-[12px] pb-1">"{product.description}"</h2>
                         <img src={product.productImage} alt="" className="rounded-md" />
                     </div>

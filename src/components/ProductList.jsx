@@ -13,7 +13,7 @@ const ProductList = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResultsVisible, setSearchResultsVisible] = useState(false);
-  const navigate = useNavigate();
+  
 
   const handleSortTypeChange = (event) => {
     setSortType(event.target.value);
