@@ -111,7 +111,7 @@ const ProductList = () => {
         <div className="min-h-screen w-full bg-gray-200">
             <Navbar searchResults={getFilteredProducts} handleSearchResults={handleSearchChange} />
             <div className="container mx-auto w-full mt-5">
-                <div className="flex flex-col md:flex-row sm:items-center py-5 justify-evenly">
+                <div className="flex flex-col md:flex-row sm:items-center py-5 justify-around">
                     <h1 className="text-3xl font-medium font-poppins mb-4 md:mb-0 border-b-2 border-gray-500 product-title">
                         Products
                     </h1>
