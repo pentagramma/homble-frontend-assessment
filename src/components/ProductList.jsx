@@ -153,7 +153,7 @@ const ProductList = () => {
                     </div>
                 </div>
                 {getFilteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 pl-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 sm:pl-10">
                         {getFilteredProducts.map((product) => (
                             <ProductTile key={product.id} product={product} onRemove={handleRemoveProduct} />
                         ))}
