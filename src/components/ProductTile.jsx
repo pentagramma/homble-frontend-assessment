@@ -57,7 +57,7 @@ const ProductTile = ({ product, onRemove  }) => {
                 </div>
                 
             </div>
-            <div className=" lg:w-[8cm] md:w-[8cm] w-[9cm] flex justify-center items-center mb-2 border-gray-300 border rounded-md flex-row mt-1">
+            <div className=" lg:w-[8cm] md:w-[8cm] w-[8.95cm] flex justify-center items-center mb-2 border-gray-300 border rounded-md flex-row mt-1">
                 <input type="checkbox" name="" id="" className='cursor-pointer' onChange={handleCheckboxChange}/> 
                 <h2 className="font-poppins mx-2 text-[12px]">Remove this item</h2>
             </div>
