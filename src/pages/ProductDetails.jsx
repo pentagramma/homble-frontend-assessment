@@ -49,7 +49,7 @@ const ProductDetails = () => {
         <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 lg:p-12">
             <div className="w-full flex justify-start px-3 md:px-3 lg:px-3">
                 <button 
-                    className='bg-blue-400 py-2 md:py-2 lg:py-2 rounded-md text-white flex items-center justify-between px-3 md:px-3 lg:px-3 hover:scale-105 duration-300 mb-4' 
+                    className='bg-blue-400 py-2 md:py-2 lg:py-2 rounded-2xl hover:shadow-lg text-white flex items-center justify-between px-3 md:px-3 lg:px-3 hover:scale-105 duration-300 mb-4' 
                     onClick={handleRedirect}
                 >
                     <IoIosArrowBack className='pr-1'/>

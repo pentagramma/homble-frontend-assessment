@@ -22,7 +22,7 @@ const AddProductModal = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white p-4 rounded shadow-lg w-full max-w-md font-poppins">
+      <div className="bg-white p-4 rounded shadow-lg w-full max-w-md font-poppins sm:my-2">
         <h2 className="text-2xl font-bold mb-4">Add Product</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -69,13 +69,13 @@ const AddProductModal = ({ onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="bg-gray-300 px-4 py-2 rounded mr-4"
+              className="bg-gray-300 px-4 py-2 rounded-2xl mr-4"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:scale-105 duration-300"
+              className="bg-blue-400 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 hover:shadow-lg"
             >
               Add
             </button>

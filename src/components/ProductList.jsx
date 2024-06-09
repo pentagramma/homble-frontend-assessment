@@ -100,12 +100,12 @@ const ProductList = () => {
           <h1 className="text-3xl font-medium font-poppins mb-4 md:mb-0 border-b-2 border-gray-500 product-title">Products</h1>
           <div className='flex flex-col md:flex-row items-center font-poppins'>
             <h1 className="mr-2 mb-2 md:mb-0">Sort by</h1>
-            <div className='flex mb-2 md:mb-0 md:mr-10 '>
-              <select className='border px-2 py-1 w-[100px] md:mr-2' value={sortType} onChange={handleSortTypeChange}>
+            <div className='flex mb-2 md:mb-0 md:mr-10'>
+              <select className='border px-2 py-1 w-[100px] md:mr-2 cursor-pointer' value={sortType} onChange={handleSortTypeChange}>
                 <option value="price">Price</option>
                 <option value="name">Name</option>
               </select>
-              <select className='border px-2 py-1 w-[185px]' value={sortOrder} onChange={handleSortOrderChange}>
+              <select className='border px-2 py-1 w-[185px] cursor-pointer' value={sortOrder} onChange={handleSortOrderChange}>
                 {sortType === 'price' ? (
                   <>
                     <option value="asc">Ascending</option>
@@ -121,7 +121,7 @@ const ProductList = () => {
             </div>
             <button
               onClick={() => setShowModal(true)}
-              className="bg-blue-400 text-white px-4 py-2 rounded hover:scale-105 duration-300 font-poppins"
+              className="bg-blue-400 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 font-poppins hover:shadow-lg"
             >
               Add Product
             </button>
