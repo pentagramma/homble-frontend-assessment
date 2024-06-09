@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import App from '../App.css'
+import { useState } from 'react';
+
 
 const ProductTile = ({ product }) => {
     const productPrice = product?.price;
@@ -14,11 +16,17 @@ const ProductTile = ({ product }) => {
         navigate(`/productdetails/${product.id}`);
     };
 
+    const [showPopOut, setShowPopOut] = useState(false);
+
     return (
-        <div className="sm:flex sm:justify-center sm:items-center">
+        <>
+        <div className="sm:flex sm:justify-center sm:items-center main-div">
             <div
                 className="product-tile lg:h-[8cm] lg:w-[8cm] md:h-[8cm] md:w-[8cm] sm:h-[7cm] sm:w-[7cm] border border-gray-300 shadow-md hover:bg-blue-400 hover:text-white flex justify-evenly items-center rounded-md p-[10px] lg:hover:scale-105 md:hover:scale-105 hover:duration-300 mb-2 sm:mb-2"
                 onClick={handleRedirect}
+                onMouseEnter={() => setShowPopOut(true)}
+                onMouseLeave={() => setShowPopOut(false)}
+                
             >
                 <div className="flex-col flex object-contain cursor-pointer justify-start items-start w-full">
                    
@@ -28,6 +36,7 @@ const ProductTile = ({ product }) => {
                         <h2 className="italic text-[12px] pb-1">"{product.description}"</h2>
                         <img src={product.productImage} alt="" className="rounded-md" />
                     </div>
+                    
                     
                     <div className="flex items-start justify-start text-[15px] font-poppins py-1 font-medium w-[95%] mx-2">
                         <h1>{product.name}</h1>
@@ -39,8 +48,11 @@ const ProductTile = ({ product }) => {
                     
                     </div>
                 </div>
+                
             </div>
         </div>
+        
+        </>
     );
 };
 
