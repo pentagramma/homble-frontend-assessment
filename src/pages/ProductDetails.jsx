@@ -56,13 +56,14 @@ const ProductDetails = () => {
                     <p className='pr-1 font-poppins'>Back</p>
                 </button>
             </div>
-            <div className='item-card flex flex-col justify-center items-center border-gray-400 border rounded-md shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-2 md:p-2 lg:p-2'>
+            <div className='item-card flex flex-col justify-center items-center border-gray-400 border rounded-md shadow-2xl  max-w-xs sm:max-w-sm md:w-[500px] lg:max-[500px] p-2 sm:p-2 md:p-2 lg:p-2'>
                 <div className='flex justify-center items-center flex-col'>
-                    <h1 className='font-poppins text-2xl md:text-3xl border-b-2 px-2'>{product.name}</h1>
-                    <img src={product.productImage} alt={product.name} className='rounded-md my-3 w-full max-w-xs md:max-w-sm lg:max-w-md'/>
+                    
+                    <img src={product.productImage} alt={product.name} className='rounded-md  w-full max-w-xs md:max-w-sm lg:max-w-md'/>
                 </div>
-                <div className='text-gray-500 px-4 md:px-6 lg:px-10 rounded-md flex-col flex justify-center items-center font-abel text-xl md:text-2xl w-full'>
-                    <h1 className='font-bold'>Rs {product.selling_price}.00</h1>
+                <div className='rounded-md flex-col flex justify-start items-start font-abel text-xl md:text-2xl w-full'>
+                <h1 className='font-poppins text-2xl md:text-3xl border-b-2'>{product.name}</h1>
+                    <h1 className='font-bold text-gray-500'>Rs {product.selling_price}.00</h1>
                 </div>
             </div>
             <div className='flex flex-col justify-center items-start mt-10 w-full max-w-2xl'>
