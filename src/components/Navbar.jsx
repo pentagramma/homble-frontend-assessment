@@ -71,7 +71,7 @@ const Navbar = () => {
             {filteredProducts.slice(0, 5).map((product) => (
               <div
                 key={product.id}
-                className="px-4 py-2 cursor-pointer hover:bg-gray-100 flex justify-between items-center"
+                className="px-4 py-2 cursor-pointer hover:bg-gray-200 flex justify-between items-center hover:rounded-md font-poppins"
                 onClick={() => {
                   setSearchQuery(product.name);
                   setSearchResultsVisible(false);
