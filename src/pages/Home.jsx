@@ -3,9 +3,11 @@ import ProductList from "../components/ProductList";
 
 const Home = () => {
   return (
-    <>
-      <ProductList />
-    </>
+    
+      <div className="bg-gray-200">
+        <ProductList />
+      </div>
+    
   );
 };
 
