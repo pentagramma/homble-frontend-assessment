@@ -81,7 +81,7 @@ const ProductList = () => {
                         <div className="flex flex-col md:flex-row sm:items-center py-5 justify-evenly">
                             {skeletonLoader}
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 pl-10 mt-[150px]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-1 lg:gap-x-0.5 pl-10 mt-[150px]">
                             {Array(9)
                                 .fill()
                                 .map((_, index) => (
@@ -153,7 +153,7 @@ const ProductList = () => {
                     </div>
                 </div>
                 {getFilteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-1 lg:gap-x-0.5 gap-y-3 sm:pl-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1.5 md:gap-x-1 lg:gap-x-0.5 gap-y-3 lg:px-[250px] md:px-[60px]">
                         {getFilteredProducts.map((product) => (
                             <ProductTile key={product.id} product={product} onRemove={handleRemoveProduct} />
                         ))}

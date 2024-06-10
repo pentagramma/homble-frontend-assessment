@@ -35,8 +35,8 @@ const Navbar = ({ searchResults, handleSearchResults }) => {
     };
 
     return (
-        <div className="max-w-screen h-[60px] shadow-md bg-gradient-to-r from-blue-950 to-blue-800 relative top-2 mx-4 rounded-full items-center flex justify-end">
-            <div className="bg-white w-[250px] h-[40px] mr-3 rounded-full flex justify-between items-center relative">
+        <div className="max-w-screen h-[70px] shadow-md bg-gradient-to-r from-blue-950 to-blue-800 relative top-2 mx-4 rounded-full items-center flex justify-end">
+            <div className="bg-white w-[250px] h-[40px] mr-4 rounded-full flex justify-between items-center relative">
                 <input
                     type="text"
                     placeholder="Search for items..."
