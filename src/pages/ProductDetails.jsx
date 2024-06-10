@@ -80,7 +80,7 @@ const ProductDetails = () => {
                     <p className='pr-1 font-poppins'>Back</p>
                 </button>
             </div>
-            <div className='item-card flex flex-col justify-center items-center border-gray-400 border rounded-md shadow-2xl max-w-xs sm:max-w-sm md:w-[500px] lg:max-[500px] p-2 sm:p-2 md:p-2 lg:p-2'>
+            <div className='item-card flex flex-col justify-center items-center border-gray-400 border rounded-md shadow-2xl max-w-xs sm:max-w-sm md:w-[500px] lg:max-[500px] p-2 sm:p-2 md:p-2 lg:p-2 bg-gray-200'>
                 <div className='flex justify-center items-center flex-col'>
                     <img src={product.productImage} alt={product.name} className='rounded-md w-full max-w-xs md:max-w-sm lg:max-w-md'/>
                 </div>

@@ -108,7 +108,7 @@ const ProductList = () => {
     }
 
     return (
-        <div className="min-h-screen w-full bg-gray-200">
+        <div className="min-h-screen w-full bg-gradient-to-t from-gray-200 to-bg-gray-300">
             <Navbar searchResults={getFilteredProducts} handleSearchResults={handleSearchChange} />
             <div className="container mx-auto w-full mt-5">
                 <div className="flex flex-col md:flex-row sm:items-center py-5 justify-around">
