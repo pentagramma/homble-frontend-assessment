@@ -29,7 +29,7 @@ const ProductTile = ({ product, onRemove  }) => {
         <>
         <div className="sm:flex justify-center items-center main-div flex flex-col">
             <div
-                className="product-tile lg:h-[8cm] lg:w-[8cm] md:h-[8cm] md:w-[8cm] sm:h-[7cm] sm:w-[7cm] border border-gray-300  hover:bg-blue-900 hover:text-white flex justify-evenly items-center rounded-md p-[10px] lg:hover:scale-105 md:hover:scale-105 hover:duration-300 mb-1 sm:mb-1 lg:hover:drop-shadow-md md:hover:drop-shadow-md"
+                className="product-tile lg:h-[8cm] lg:w-[8cm] md:h-[8cm] md:w-[8cm] sm:h-[7cm] sm:w-[7cm] border border-gray-300 hover:bg-gradient-to-r hover:from-blue-900 hover:to-blue-500 hover:text-white flex justify-evenly items-center rounded-md p-[10px] lg:hover:scale-105 md:hover:scale-105 md:hover:duration-300 lg:hover:duration-300 mb-1 sm:mb-1 lg:hover:drop-shadow-md md:hover:drop-shadow-md"
                 onClick={handleRedirect}
                 onMouseEnter={() => setShowPopOut(true)}
                 onMouseLeave={() => setShowPopOut(false)}

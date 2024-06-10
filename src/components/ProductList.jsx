@@ -127,7 +127,7 @@ const ProductList = () => {
                                 <option value="name">Name</option>
                             </select>
                             <select
-                                className="border px-2 py-1 w-[185px] cursor-pointer"
+                                className="border px-2 py-1 w-[185px] cursor-pointer rounded-full"
                                 value={sortOrder}
                                 onChange={handleSortOrderChange}
                             >
