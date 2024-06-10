@@ -111,7 +111,7 @@ const ProductList = () => {
         <div className="min-h-screen w-full bg-gradient-to-t from-gray-200 to-bg-gray-300">
             <Navbar searchResults={getFilteredProducts} handleSearchResults={handleSearchChange} />
             <div className="container mx-auto w-full mt-5">
-                <div className="flex flex-col md:flex-row sm:items-center py-5 justify-around">
+                <div className="flex flex-col md:flex-row sm:items-center py-5 justify-evenly">
                     <h1 className="text-3xl font-medium font-poppins mb-4 md:mb-0 border-b-2 border-gray-500 product-title">
                         Products
                     </h1>
@@ -153,7 +153,7 @@ const ProductList = () => {
                     </div>
                 </div>
                 {getFilteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1.5 md:gap-x-1 lg:gap-x-0.5 gap-y-3 lg:px-[250px] md:px-[60px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-1.5 md:gap-x-1 lg:gap-x-0.5 gap-y-3 lg:px-[50px] md:px-[60px]">
                         {getFilteredProducts.map((product) => (
                             <ProductTile key={product.id} product={product} onRemove={handleRemoveProduct} />
                         ))}
