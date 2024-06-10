@@ -35,12 +35,12 @@ const ProductTile = ({ product, onRemove  }) => {
                 onMouseLeave={() => setShowPopOut(false)}
                 
             >
-                <div className="flex-col flex object-contain cursor-pointer justify-start items-start w-full">
+                <div className="flex-col flex object-contain cursor-pointer justify-start items-start w-full ">
                    
                     
                     
                     <div className="flex justify-center items-center object-contain flex-col w-full">
-                        <h2 className="italic text-[12px] pb-2">"{product.description}"</h2>
+                        <h2 className="italic lg:text-[12px] md:text-[12px] sm:text-[9px] pb-2">"{product.description}"</h2>
                         <img src={product.productImage} alt="" className="rounded-md" />
                     </div>
                     
@@ -57,7 +57,7 @@ const ProductTile = ({ product, onRemove  }) => {
                 </div>
                 
             </div>
-            <div className=" lg:w-[8cm] md:w-[8cm] w-[7.6cm] flex justify-center items-center mb-2 border-gray-400 border rounded-md flex-row mt-1 lg:hover:drop-shadow-md md:hover:shadow-md">
+            <div className=" lg:w-[8cm] md:w-[8cm] w-[7.8cm] flex justify-start pl-1 items-center mb-2 border-gray-400 border rounded-md flex-row mt-1 lg:hover:drop-shadow-md md:hover:shadow-md">
                 <input type="checkbox" name="" id="" className='cursor-pointer' onChange={handleCheckboxChange}/> 
                 <h2 className="font-poppins mx-2 text-[12px]">Remove this item</h2>
             </div>
