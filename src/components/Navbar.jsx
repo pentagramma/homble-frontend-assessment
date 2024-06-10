@@ -46,7 +46,7 @@ const Navbar = ({ searchResults, handleSearchResults }) => {
                     className="h-[40px] w-[200px] rounded-full outline-none border-none px-4 font-poppins"
                 />
                 <button onClick={handleSearchClick}>
-                    <IoIosSearch className="mr-1 bg-blue-500 rounded-full size-[35px] p-2 cursor-pointer hover:scale-105 duration-300" />
+                    <IoIosSearch className="mr-1 bg-blue-400 rounded-full size-[35px] p-2 cursor-pointer hover:scale-105 duration-300" />
                 </button>
                 {searchResultsVisible && searchQuery.trim() !== '' && (
                     <div className="absolute top-[45px] left-0 bg-white border border-gray-300 w-full rounded-lg shadow-lg z-10">

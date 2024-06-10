@@ -101,8 +101,8 @@ const ProductList = () => {
 
     if (error) {
         return (
-            <div className="container mx-auto px-4">
-                <p>Something went wrong: {error}</p>
+            <div className="container mx-auto px-4 justify-center items-center flex flex-col text-[200px]">
+                <p>Something went wrong: {error} <CgSmileSad className='mx-2'/></p>
             </div>
         );
     }
@@ -159,7 +159,7 @@ const ProductList = () => {
                         ))}
                     </div>
                 ) : (
-                    <div className="flex justify-center items-center h-[15cm] bg-gray-300 rounded-lg">
+                    <div className="flex justify-center items-center h-[15cm] bg-gray-200 rounded-lg">
                         <p className="text-xl font-medium font-poppins justify-center flex items-center">
                             <CgSmileSad className="mx-1" />
                             No products found
