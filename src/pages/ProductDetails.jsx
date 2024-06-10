@@ -73,7 +73,7 @@ const ProductDetails = () => {
         <div className="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 lg:p-12">
             <div className="w-full flex justify-start px-3 md:px-3 lg:px-3">
                 <button 
-                    className='bg-blue-400 py-2 md:py-2 lg:py-2 rounded-2xl hover:shadow-lg text-white flex items-center justify-between px-3 md:px-3 lg:px-3 hover:scale-105 duration-300 mb-4' 
+                    className='bg-gradient-to-r from-blue-950 to-blue-800 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700 py-2 md:py-2 lg:py-2 rounded-2xl hover:shadow-black hover:shadow text-white flex items-center justify-between px-3 md:px-3 lg:px-3 hover:scale-105 duration-300 mb-4' 
                     onClick={handleRedirect}
                 >
                     <IoIosArrowBack className='pr-1'/>
@@ -91,10 +91,10 @@ const ProductDetails = () => {
                     </div>
                     <div className='tooltip-container '>
                         {loading ? (
-                            <p className='font-poppins text-blue-400'><img src={Loadingg} alt="" className='size-[30px] m-4'/></p>
+                            <p className='font-poppins text-blue-950'><img src={Loadingg} alt="" className='size-[30px] m-4'/></p>
                         ) : (
                             <button className='add-btn cursor-pointer hover:scale-105 duration-300 border-none' onClick={handleSubmit}>
-                                <FaPlus className='bg-blue-400 text-white rounded-full size-[50px] hover:shadow-md relative mr-2 '/>
+                                <FaPlus className='bg-gradient-to-r from-blue-950 to-blue-800 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700 text-white rounded-full size-[50px] hover:shadow-black hover:shadow relative mr-2 '/>
                             </button>
                         )}
                         <span className="tooltip-text">Add Product</span>

@@ -29,7 +29,7 @@ const ProductTile = ({ product, onRemove  }) => {
         <>
         <div className="sm:flex justify-center items-center main-div flex flex-col">
             <div
-                className="product-tile lg:h-[8cm] lg:w-[8cm] md:h-[8cm] md:w-[8cm] sm:h-[7cm] sm:w-[7cm] border border-gray-300  hover:bg-blue-400 hover:text-white flex justify-evenly items-center rounded-md p-[10px] lg:hover:scale-105 md:hover:scale-105 hover:duration-300 mb-1 sm:mb-1 lg:hover:drop-shadow-md md:hover:drop-shadow-md"
+                className="product-tile lg:h-[8cm] lg:w-[8cm] md:h-[8cm] md:w-[8cm] sm:h-[7cm] sm:w-[7cm] border border-gray-300  hover:bg-blue-900 hover:text-white flex justify-evenly items-center rounded-md p-[10px] lg:hover:scale-105 md:hover:scale-105 hover:duration-300 mb-1 sm:mb-1 lg:hover:drop-shadow-md md:hover:drop-shadow-md"
                 onClick={handleRedirect}
                 onMouseEnter={() => setShowPopOut(true)}
                 onMouseLeave={() => setShowPopOut(false)}
@@ -40,7 +40,7 @@ const ProductTile = ({ product, onRemove  }) => {
                     
                     
                     <div className="flex justify-center items-center object-contain flex-col w-full">
-                        <h2 className="italic text-[12px] pb-1">"{product.description}"</h2>
+                        <h2 className="italic text-[12px] pb-2">"{product.description}"</h2>
                         <img src={product.productImage} alt="" className="rounded-md" />
                     </div>
                     

@@ -35,8 +35,8 @@ const Navbar = ({ searchResults, handleSearchResults }) => {
     };
 
     return (
-        <div className="max-w-screen h-[50px] shadow-md bg-blue-400 relative top-2 mx-4 rounded-full items-center flex justify-end">
-            <div className="bg-white w-[250px] h-[40px] mr-1 rounded-full flex justify-between items-center relative">
+        <div className="max-w-screen h-[60px] shadow-md bg-gradient-to-r from-blue-950 to-blue-800 relative top-2 mx-4 rounded-full items-center flex justify-end">
+            <div className="bg-white w-[250px] h-[40px] mr-3 rounded-full flex justify-between items-center relative">
                 <input
                     type="text"
                     placeholder="Search for items..."
@@ -46,7 +46,7 @@ const Navbar = ({ searchResults, handleSearchResults }) => {
                     className="h-[40px] w-[200px] rounded-full outline-none border-none px-4 font-poppins"
                 />
                 <button onClick={handleSearchClick}>
-                    <IoIosSearch className="mr-1 bg-blue-400 rounded-full size-[35px] p-2 cursor-pointer hover:scale-105 duration-300" />
+                    <IoIosSearch className="mr-2 bg-blue-800 hover:bg-blue-900 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700 rounded-full size-[30px] p-2 cursor-pointer hover:scale-105 duration-300 hover:shadow-black hover:shadow text-white" />
                 </button>
                 {searchResultsVisible && searchQuery.trim() !== '' && (
                     <div className="absolute top-[45px] left-0 bg-white border border-gray-300 w-full rounded-lg shadow-lg z-10">

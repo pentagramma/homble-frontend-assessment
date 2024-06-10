@@ -85,7 +85,7 @@ const ProductList = () => {
                             {Array(9)
                                 .fill()
                                 .map((_, index) => (
-                                    <div className="bg-gray-200 mx-3 animate-pulse rounded-lg shadow-md p-4 flex flex-col items-center" key={index}>
+                                    <div className="bg-gray-200 animate-pulse rounded-lg shadow-md p-4 flex flex-col items-center" key={index}>
                                         <div className="w-full h-40 bg-gray-300 rounded mb-4"></div>
                                         <div className="w-3/4 h-6 bg-gray-300 rounded mb-2"></div>
                                         <div className="w-1/2 h-6 bg-gray-300 rounded mb-2"></div>
@@ -119,7 +119,7 @@ const ProductList = () => {
                         <h1 className="mr-2 mb-2 md:mb-1">Sort by</h1>
                         <div className="flex mb-2 md:mb-0 md:mr-10">
                             <select
-                                className="border px-2 py-1 w-[100px] md:mr-2 cursor-pointer"
+                                className="border px-2 py-1 w-[100px] md:mr-2 cursor-pointer rounded-full"
                                 value={sortType}
                                 onChange={handleSortTypeChange}
                             >
@@ -146,14 +146,14 @@ const ProductList = () => {
                         </div>
                         <button
                             onClick={() => setShowModal(true)}
-                            className="bg-blue-400 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 font-poppins hover:shadow-lg"
+                            className="bg-gradient-to-r from-blue-950 to-blue-800 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 font-poppins hover:shadow-lg"
                         >
                             Add Product
                         </button>
                     </div>
                 </div>
                 {getFilteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-3 sm:pl-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-2 md:gap-x-1 lg:gap-x-0.5 gap-y-3 sm:pl-10">
                         {getFilteredProducts.map((product) => (
                             <ProductTile key={product.id} product={product} onRemove={handleRemoveProduct} />
                         ))}

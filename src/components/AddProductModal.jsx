@@ -82,7 +82,7 @@ const AddProductModal = ({ onClose }) => {
             </button>
             <button
               type="submit"
-              className="bg-blue-400 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 hover:shadow-lg w-[100px] justify-center flex items-center"
+              className="bg-gradient-to-r from-blue-950 to-blue-800 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-700 text-white px-4 py-2 rounded-2xl hover:scale-105 duration-300 hover:shadow-black hover:shadow w-[90px] justify-center flex items-center"
               disabled={loading}
             >
               {loading ? <img src={Loadingg} className="size-[20px]" alt="" /> : "Add"}
